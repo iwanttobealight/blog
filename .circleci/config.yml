@@ -15,3 +15,6 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ./node_modules
+      - run:
+          name: Lint Code
+          command: yarn lint
