@@ -2,19 +2,53 @@ version: 2.1
 jobs:
   build:
     docker: 
-      - image: circleci/node:10.15.3 # the primary container, where your job's commands are run
+      - image: docker:17.05.0-ce-git
     steps:
       - checkout # check out the code in the project directory
-      - restore_cache:
-          keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
+      - setup_remote_docker
       - run:
-          name: Install Dependencies
-          command: yarn
-      - save_cache:
-          key: yarn-packages-{{ checksum "yarn.lock" }}
-          paths:
-            - ./node_modules
+          name: Setup Env
+          command: |
+            echo 'export IMAGE_TAG=${CIRCLE_TAG:-latest}' >> $BASH_ENV
+            echo 'export IMAGE_NAME=blog' >> $BASH_ENV
       - run:
-          name: Lint Code
-          command: yarn lint
+          name: Build and push Docker image
+          command: |
+            source $BASH_ENV
+            docker build -t iwanttobealight/$IMAGE_NAME:$IMAGE_TAG .
+            docker login -u "$DOCKER_LOGIN" -p "$DOCKER_PASSWORD"
+            docker push iwanttobealight/$IMAGE_NAME:$IMAGE_TAG
+
+deliver:
+  machine:
+    enabled: true
+  steps:
+    - run:
+        name: Deploy Over SSH
+        command: ssh $SSH_USER@$SSH_HOST "cd /root &&
+          sudo docker login -u "$DOCKER_LOGIN" -p "$DOCKER_PASSWORD" &&
+          sudo docker pull iwanttobealight/blog &&
+          sudo docker logout &&
+          sudo docker-compose down &&
+          sudo docker-compose up -d &&
+          sudo docker image prune -f"
+
+
+workflows:
+  version: 2
+  # for master brunch
+  deploy-dev:
+    jobs:
+      - build_and_push:
+          filters:
+            branches:
+              only:
+                - master
+      - deliver:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - build_and_push
+          
