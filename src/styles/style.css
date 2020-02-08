@@ -4,5 +4,5 @@ html {
   display: flex;
   height: 100%;
   justify-content: center;
-  background: linear-gradient(white, skyblue);
+  background: linear-gradient(white, lightgreen);
 }
