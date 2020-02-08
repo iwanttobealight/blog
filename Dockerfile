@@ -17,4 +17,4 @@ RUN yarn build
 
 FROM nginx 
 
-COPY --from=build /app/dist .
+COPY --from=build dist .
