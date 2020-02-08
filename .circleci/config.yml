@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  build:
+  build_and_push:
     docker: 
       - image: docker:17.05.0-ce-git
     steps:
