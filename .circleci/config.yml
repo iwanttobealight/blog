@@ -25,7 +25,7 @@ jobs:
     steps:
       - run:
           name: Deploy Over SSH
-          command: ssh $SSH_USER@$SSH_HOST "cd /root &&
+          command: ssh $SSH_USER@$SSH_HOST "cd /root/iwanttobealight &&
             sudo docker login -u "$DOCKER_LOGIN" -p "$DOCKER_PASSWORD" &&
             sudo docker pull iwanttobealight/blog &&
             sudo docker logout &&
