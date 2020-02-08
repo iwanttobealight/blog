@@ -1,4 +1,4 @@
-FROM keymetrics/pm2:10-alpine
+FROM keymetrics/pm2:10-alpine as build
 
 WORKDIR /app
 
@@ -13,7 +13,6 @@ RUN yarn
 
 COPY . .
 
-# Expose application default port
-EXPOSE 3000
+FROM nginx 
 
-CMD [ "pm2-docker", "start", "ecosystem.config.js" ]
+COPY --from=build /app/dist .
