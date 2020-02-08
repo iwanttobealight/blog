@@ -13,6 +13,8 @@ RUN yarn
 
 COPY . .
 
+RUN yarn build
+
 FROM nginx 
 
 COPY --from=build /app/dist .
