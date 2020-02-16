@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "parcel index.html --port 5000",
     "build": "parcel build index.html --public-url ./",
-    "lint": "echo 'run linter'"
+    "lint": "eslint src/**/*.tsx --fix"
   },
   "dependencies": {
     "@babel/runtime": "^7.8.4",

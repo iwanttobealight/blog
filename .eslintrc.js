@@ -8,6 +8,11 @@ module.exports = {
         "plugin:react/recommended",
         "plugin:@typescript-eslint/eslint-recommended"
     ],
+    "settings": {
+        "react": {
+            "version": "detect",
+        },
+    },
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
