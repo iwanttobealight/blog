@@ -1,12 +1,17 @@
 {
   "compilerOptions": {
+    "types": [
+      "node"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "esModuleInterop": true,
     "baseUrl": "./src",
     "jsx": "react",
     "moduleResolution": "node",
     "paths": {
-      "~*": [
-        "./*"
-      ]
+      "~/*": ["./*"]
     },
   },
   "jsRules": {
