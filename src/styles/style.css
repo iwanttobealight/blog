@@ -1,7 +1,3 @@
-html {
-  font-family: Helvetica, sans-serif;
-  font-size: 32px;
-  display: flex;
-  height: 100%;
-  justify-content: center;
+main {
+  display: block;
 }
