@@ -23,12 +23,15 @@ module.exports = {
             "jsx": true
         },
         "ecmaVersion": 2018,
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": "./tsconfig.json",
     },
     "plugins": [
+        "@typescript-eslint",
         "react",
-        "@typescript-eslint"
     ],
     "rules": {
+        "@typescript-eslint/no-angle-bracket-type-assertion": "off",
+        "@typescript-eslint/rule-name": "error"
     }
 };

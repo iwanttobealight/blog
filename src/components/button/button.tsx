@@ -1,8 +1,8 @@
 import * as React from 'react';
 
 interface ButtonProps {
-  color: string
-  shadowSize: number
+  color?: string
+  shadowSize?: number
 }
 
 export const Button = (props: ButtonProps) => {

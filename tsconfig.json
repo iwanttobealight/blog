@@ -4,7 +4,12 @@
     "jsx": "react",
     "moduleResolution": "node",
     "paths": {
-      "~*": ["./*"]
-    }
+      "~*": [
+        "./*"
+      ]
+    },
+  },
+  "jsRules": {
+    "no-empty": true
   }
 }
