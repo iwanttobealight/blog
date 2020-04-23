@@ -1,14 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
+import { App } from './components/app/App';
 
-const HelloMessage = ({ name }) => {
-    return <div>
-        <div className="container">
-            <h1>Hello {name}</h1>
-        </div>
-    </div>
-}
+let root = document.getElementById("root");
 
-let App = document.getElementById("root");
-
-ReactDOM.render(<HelloMessage name="world" />, App);
+ReactDOM.render(<App />, root);
