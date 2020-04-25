@@ -13,8 +13,8 @@ export const App = () => {
       <img className="image" src={`data:image/png;base64,${buffer.toString('base64')}`} alt="me"/>
       <div className="text-wrapper">
         <p>живу в Петербурге, делаю фронтенд в <a target="_blank" rel="noopener noreferrer" href="https://breadhead.ru">хлебушке</a></p>
-        <p>люблю тесты и чистый код</p>
-        <p>организую локальный митап по <a target="_blank" rel="noopener noreferrer" href="https://nodeschool.io/spb/">node.js</a></p>
+        <p>люблю поэзию и архитектурные прогулки</p>
+        <p>здесь будет мой модный инди-блог с веб-меншенами и всем на свете</p>
       </div>
     </section>
   </main>)

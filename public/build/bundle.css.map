@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../../App.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n  let name = \"Дарья Морено-Гоголева\";\n</script>\n\n<style>\n\n\n  * {\n    box-sizing: border-box;\n    -webkit-font-smoothing: antialiased;\n\t}\n\t\n  main {\n    max-width: fit-content;\n    margin: 5rem;\n    margin-left: 1rem;\n    padding: 1rem;\n  }\n\n  h1,\n  h2,\n  h3,\n  h4 {\n    font-weight: normal;\n  }\n\n  h1 {\n    font-size: 1.5rem;\n  }\n\n  h2 {\n    font-size: 1rem;\n  }\n\n  p {\n    margin: 0;\n  }\n\n  .text-wrapper > * + * {\n    margin-top: 1rem;\n  }\n\n  .about {\n    margin-top: 2rem;\n    display: grid;\n    grid-template-columns: auto auto;\n    gap: 4rem;\n    align-items: flex-end;\n  }\n\n  .image {\n    max-width: 300px;\n    max-height: 300px;\n  }\n\n  @media (max-width: 768px) {\n    main {\n      max-width: none;\n      margin: 0;\n    }\n\n    .about {\n      grid-template-columns: auto;\n    }\n  }\n</style>\n\n<main>\n  <h1>{name}, веб-разработчица</h1>\n  <section class=\"about\">\n    <img class=\"image\" src=\"./assets/images/me.png\" alt=\"me\" />\n    <div class=\"text-wrapper\">\n      <p>\n        живу в Петербурге, делаю фронтенд в\n        <a\n          target=\"_blank\"\n          rel=\"noopener noreferrer\"\n          href=\"https://breadhead.ru\">\n          хлебушке\n        </a>\n      </p>\n      <p>люблю тесты и чистый код</p>\n      <p>\n        организую локальный митап по\n        <a\n          target=\"_blank\"\n          rel=\"noopener noreferrer\"\n          href=\"https://nodeschool.io/spb/\">\n          node.js\n        </a>\n      </p>\n    </div>\n  </section>\n</main>\n"
+  ],
+  "names": [],
+  "mappings": "AAOE,eAAE,CAAC,AACD,UAAU,CAAE,UAAU,CACtB,sBAAsB,CAAE,WAAW,AACtC,CAAC,AAEA,IAAI,eAAC,CAAC,AACJ,SAAS,CAAE,WAAW,CACtB,MAAM,CAAE,IAAI,CACZ,WAAW,CAAE,IAAI,CACjB,OAAO,CAAE,IAAI,AACf,CAAC,AAED,EAAE,eAGC,CAAC,AACF,WAAW,CAAE,MAAM,AACrB,CAAC,AAED,EAAE,eAAC,CAAC,AACF,SAAS,CAAE,MAAM,AACnB,CAAC,AAMD,CAAC,eAAC,CAAC,AACD,MAAM,CAAE,CAAC,AACX,CAAC,AAED,aAAa,CAAG,CAAC,CAAG,eAAE,CAAC,AACrB,UAAU,CAAE,IAAI,AAClB,CAAC,AAED,MAAM,eAAC,CAAC,AACN,UAAU,CAAE,IAAI,CAChB,OAAO,CAAE,IAAI,CACb,qBAAqB,CAAE,IAAI,CAAC,IAAI,CAChC,GAAG,CAAE,IAAI,CACT,WAAW,CAAE,QAAQ,AACvB,CAAC,AAED,MAAM,eAAC,CAAC,AACN,SAAS,CAAE,KAAK,CAChB,UAAU,CAAE,KAAK,AACnB,CAAC,AAED,MAAM,AAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACzB,IAAI,eAAC,CAAC,AACJ,SAAS,CAAE,IAAI,CACf,MAAM,CAAE,CAAC,AACX,CAAC,AAED,MAAM,eAAC,CAAC,AACN,qBAAqB,CAAE,IAAI,AAC7B,CAAC,AACH,CAAC"
+}
