@@ -1,11 +1,9 @@
 import React from 'react';
 import fs from 'fs'
 
+const buffer = fs.readFileSync(__dirname + '/../../../assets/images/me.png')
 
 export const App = () => {
-
-  const buffer = fs.readFileSync(__dirname + '/../../../assets/images/me.png')
-
   return (<main>
     <h1>Дарья Морено-Гоголева, веб-разработчица</h1>
     <section className="about">
