@@ -1,9 +1,11 @@
 import React from 'react';
+import imageUrl from '../../../assets/images/me.png'
 
 export const App = () => {
   return (<main>
     <h1>Дарья Морено-Гоголева, веб-разработчица</h1>
     <section className="about">
+      <img className="image" src={imageUrl} alt="me" />
       <div className="text-wrapper">
         <p>живу в Петербурге, делаю фронтенд в <a target="_blank" rel="noopener noreferrer" href="https://breadhead.ru">хлебушке</a></p>
         <p>люблю поэзию и архитектурные прогулки</p>
